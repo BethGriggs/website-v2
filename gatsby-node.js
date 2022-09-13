@@ -108,6 +108,7 @@ exports.sourceNodes = async ({ actions }) => {
           title: issue.fields.summary,
           priority: issue.fields.priority.id,
           component: issue.fields.components,
+          subcomponent: issue.fields.customfield_10008?.name,
           link: `https://bugs.openjdk.org/browse/${issue.key}`,
           // etc... 
         }

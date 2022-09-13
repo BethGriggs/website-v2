@@ -33,7 +33,7 @@ export default function Template ({ data, pageContext }) {
                       <td><a target='_blank' rel='noopener noreferrer' href={issue.node.link}>{issue.node.id}</a></td>
                       {
                         issue.node.component.length ? issue.node.component.map((component) =>
-                        (<td> {component.name} </td>)) : '/'
+                        (<td> {component.name}/{issue.node.subcomponent} </td>)) : '/'
                       }
                       <td>{issue.node.priority}</td>
                       <td>{issue.node.title}</td>
@@ -61,6 +61,7 @@ export const pageQuery = graphql`
           component {
             name
           }
+          subcomponent
         }
       }
     }
