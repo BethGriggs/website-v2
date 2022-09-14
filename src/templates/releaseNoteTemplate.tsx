@@ -10,7 +10,7 @@ export default function Template ({ data, pageContext }) {
   return (
     <Layout>
       <Seo title={`Release Notes - ${pageContext.version}`} />
-      <section className='py-5 container'>
+      <section className='py-5'>
         <div className='row py-lg-5'>
           <div className='col-lg-8 col-md-8 mx-auto'>
           <h1 className='fw-light'>{`Release Notes - ${pageContext.version}`}</h1>
