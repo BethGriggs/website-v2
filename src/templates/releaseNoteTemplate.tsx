@@ -13,7 +13,7 @@ export default function Template ({ data, pageContext }) {
       <section className='py-5'>
         <div className='row py-lg-5'>
           <div className='col-lg-8 col-md-8 mx-auto'>
-          <h1 className='fw-light'>{`Release Notes - ${pageContext.version}`}</h1>
+          <h1 className='fw-light text-center'>{`Release Notes - ${pageContext.version}`}</h1>
         </div>
         <div className="p-5 text-center">
           <table className='table text-start table-sm table-striped align-middle table-hover'>
@@ -30,10 +30,10 @@ export default function Template ({ data, pageContext }) {
                 (issue, i): string | JSX.Element =>
                   issue && (
                     <tr>
-                      <td><a target='_blank' rel='noopener noreferrer' href={issue.node.link}>{issue.node.id}</a></td>
+                      <td className="text-nowrap"><a target='_blank' rel='noopener noreferrer' href={issue.node.link}>{issue.node.id}</a></td>
                       {
                         issue.node.component.length ? issue.node.component.map((component) =>
-                        (<td> {component.name}/{issue.node.subcomponent} </td>)) : '/'
+                        (<td className="text-nowrap"> {component.name}/{issue.node.subcomponent} </td>)) : '/'
                       }
                       <td>{issue.node.priority}</td>
                       <td>{issue.node.title}</td>
