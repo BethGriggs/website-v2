@@ -20,7 +20,7 @@ export default function Template ({ data, pageContext }) {
       <a href={row.node.link}>{row.node.id}</a>
     ),
   }, {
-    dataField: 'node.component[0].name',
+    dataField: 'node.subcomponent',
     text: 'Component'
   }, {
     dataField: 'node.priority',
@@ -73,6 +73,7 @@ export const pageQuery = graphql`
           component {
             name
           }
+          subcomponent
         }
       }
     }
