@@ -19,12 +19,15 @@ export default function Template ({ data, pageContext }) {
     formatter: (cell, row) => (
       <a href={row.node.link}>{row.node.id}</a>
     ),
+    sort: true
   }, {
     dataField: 'node.subcomponent',
-    text: 'Component'
+    text: 'Component',
+    sort: true
   }, {
     dataField: 'node.priority',
-    text: 'Priority'
+    text: 'Priority',
+    sort: true
   }, {
     dataField: 'node.title',
     text: 'Title'
