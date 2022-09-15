@@ -49,7 +49,7 @@ export default function Template ({ data, pageContext }) {
               <>
                 <SearchBar { ...props.searchProps } />
                 <div className="p-5">
-                  <BootstrapTable striped hover bodyClasses="nowrap" pagination={ paginationFactory() } { ...props.baseProps } />
+                  <BootstrapTable striped hover bodyClasses="text-nowrap" pagination={ paginationFactory() } { ...props.baseProps } />
                 </div>
               </>
             )
