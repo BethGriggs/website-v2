@@ -36,11 +36,9 @@ export default function Template ({ data, pageContext }) {
   return (
     <Layout>
       <Seo title={`Release Notes - ${pageContext.version}`} />
-      <section className='py-5 container'>
-        <div className='row py-lg-5'>
-          <div className='col-lg-8 col-md-8 mx-auto'>
-          <h1 className='fw-light'>{`Release Notes - ${pageContext.version}`}</h1>
-        </div>
+      <section className='py-5 container-xxl'>
+        <h1 className='fw-light text-center'>{`Release Notes - ${pageContext.version}`}</h1>
+   
         <ToolkitProvider
           keyField='node.id'
           data={ releaseNotes }
@@ -50,15 +48,14 @@ export default function Template ({ data, pageContext }) {
           {
             props => (
               <>
-                <SearchBar { ...props.searchProps } />
                 <div className="p-5">
+                  <SearchBar className="" { ...props.searchProps } />
                   <BootstrapTable striped hover bodyClasses="text-nowrap" pagination={ paginationFactory() } { ...props.baseProps } />
                 </div>
               </>
             )
           }
         </ToolkitProvider>
-      </div>
     </section>
     </Layout>
   )
